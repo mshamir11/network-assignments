@@ -1,0 +1,21 @@
+import os
+import pandas as pd
+
+# buffer_list = ['32768','65536']
+RESULT_PATH ='./results/tcp_results_with_wordcount.json'
+buffer_list = ['32','1024','32768','65536']
+file = open(RESULT_PATH,'w')
+for item in buffer_list:
+    for i in range(6):
+        command = 'python tcp_client.py -i '+str(i)+' -b ' + item+' -r ' + RESULT_PATH
+        print(command)
+        os.system(command)
+
+
+
+
+with open(RESULT_PATH,'a') as f:
+    f.write(']')
+
+df =pd.read_json(RESULT_PATH)
+print(df)

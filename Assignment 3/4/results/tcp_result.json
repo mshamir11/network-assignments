@@ -1,0 +1,13 @@
+,
+{"Book_Name": "bleak_house", "Protocol": "TCP", "PID": "58851", "Buffer_Size": 1024, "Total_Time_Taken": 4.806509017944336, "Throughput": 409177.6365461043, "Word_Count": "356478"},
+{"Book_Name": "bleak_house", "Protocol": "TCP", "PID": "58856", "Buffer_Size": 1024, "Total_Time_Taken": 4.874114036560059, "Throughput": 403502.2539989696, "Word_Count": "356478"},
+{"Book_Name": "bleak_house", "Protocol": "TCP", "PID": "59408", "Buffer_Size": 1024, "Total_Time_Taken": 5.147526502609253, "Throughput": 382070.10668193403, "Word_Count": "356478"},
+{"Book_Name": "bleak_house", "Protocol": "TCP", "PID": "59437", "Buffer_Size": 1024, "Total_Time_Taken": 4.941577434539795, "Throughput": 397993.56097374577, "Word_Count": "356478"},
+{"Book_Name": "bleak_house", "Protocol": "TCP", "PID": "59446", "Buffer_Size": 1024, "Total_Time_Taken": 4.929722547531128, "Throughput": 398950.64702676993, "Word_Count": "356478"},
+{"Book_Name": "bleak_house", "Protocol": "TCP", "PID": "59451", "Buffer_Size": 1024, "Total_Time_Taken": 4.925751209259033, "Throughput": 399272.29704641283, "Word_Count": "356478"},
+{"Book_Name": "bleak_house", "Protocol": "TCP", "PID": "59457", "Buffer_Size": 1024, "Total_Time_Taken": 4.986504077911377, "Throughput": 394407.77933220286, "Word_Count": "356478"},
+{"Book_Name": "anna_kareina", "Protocol": "TCP", "PID": "59464", "Buffer_Size": 1024, "Total_Time_Taken": 5.002927303314209, "Throughput": 406493.01433038956, "Word_Count": "352854"},
+{"Book_Name": "anna_kareina", "Protocol": "TCP", "PID": "59471", "Buffer_Size": 1024, "Total_Time_Taken": 5.071527481079102, "Throughput": 400994.57364416885, "Word_Count": "352854"},
+{"Book_Name": "don_quixote", "Protocol": "TCP", "PID": "59481", "Buffer_Size": 1024, "Total_Time_Taken": 7.068029403686523, "Throughput": 333100.9062825935, "Word_Count": "430275"},
+{"Book_Name": "les_miserables_victor_hugo", "Protocol": "TCP", "PID": "59488", "Buffer_Size": 1024, "Total_Time_Taken": 13.95006513595581, "Throughput": 236950.64989196698, "Word_Count": "568749"},
+{"Book_Name": "middlemarch", "Protocol": "TCP", "PID": "59500", "Buffer_Size": 1024, "Total_Time_Taken": 4.249936103820801, "Throughput": 432381.0888234197, "Word_Count": "319488"}
