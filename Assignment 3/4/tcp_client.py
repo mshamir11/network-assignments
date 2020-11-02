@@ -40,41 +40,48 @@ print(f"Found {book} with index {INDEX}")
 # Opening the output file and creating the file name
 pid = str(os.getpid())
 output_path ='./received_files/'+book+'_'+PROTOCOL+'_'+pid+'.txt'
-write_file = open(output_path,'w')
+write_file = open(output_path,'wb')
 message = bytes('','utf-16')
 print(f"Started receiving the file")
 
+signal =True
 
 
-while True:
+while signal:
     
+    
+
+# client_socket.setsockopt(socket.SOL_TCP,socket.TCP_QUICKACK,True)
     try:
         temp_message = client_socket.recv(BUFFER)
-        # client_socket.setsockopt(socket.SOL_TCP,socket.TCP_QUICKACK,True)
         message += temp_message
-        client_socket.settimeout(0.1)
-        
         print(f"Time elapsed: {time.time() - start_time}s")
-    
-    except socket.timeout:             
-       
-        write_file.write(message.decode('utf-16'))
-        final_time = time.time() - start_time
-        print(f"it took {final_time}s to receive the file")
-        print(f" {book} received completely using TCP protocol with {BUFFER} bytes buffer. Thanks server!")
-        size_of_file = os.path.getsize(output_path)
-        through_put = size_of_file/final_time
-        word_count = subprocess.check_output(f"cat {output_path} | wc -w",shell=True)
-        word_count = (word_count.decode())[:-1]
-        dictionary = {"Book_Name":book,"Protocol":PROTOCOL,"PID":pid,"Buffer_Size":BUFFER,"Total_Time_Taken":final_time,"Throughput":through_put,"Word_Count":word_count}
         
-        with open(RESULT_PATH, 'a') as f:
-           
-            f.write(",\n"+json.dumps(dictionary))
+        client_socket.settimeout(0.1)
+        if (len(temp_message)<=0):
+            break
+    except:
+        break
+   
+            
+    
+write_file.write(message)
+final_time = time.time() - start_time
+print(f"it took {final_time}s to receive the file")
+print(f" {book} received completely using TCP protocol with {BUFFER} bytes buffer. Thanks server!")
+size_of_file = os.path.getsize(output_path)
+through_put = size_of_file/final_time
+word_count = subprocess.check_output(f"cat {output_path} | wc -w",shell=True)
+word_count = (word_count.decode())[:-1]
+dictionary = {"Book_Name":book,"Protocol":PROTOCOL,"PID":pid,"Buffer_Size":BUFFER,"Total_Time_Taken":final_time,"Throughput":through_put,"Word_Count":word_count}
+
+with open(RESULT_PATH, 'a') as f:
+    
+    f.write(",\n"+json.dumps(dictionary))
 
         
-        client_socket.close()
-        break
+        
+    
     
 
 
