@@ -5,7 +5,7 @@ from _thread import *
 
 
 
-RESULT_PATH ='./results/tcp_results.json'
+RESULT_PATH ='./results/tcp_simultaneous.json'
 def call_tcp1(index,buffer,RESULT_PATH):
     command = 'python tcp_client1.py -i '+str(index)+' -b ' + str(buffer)+' -r '+RESULT_PATH
     os.system(command)

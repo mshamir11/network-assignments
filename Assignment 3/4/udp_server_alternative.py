@@ -12,6 +12,20 @@ RESULT_PATH ='./results/udp_ip_address_and_port.json'
 PROTOCOL = 'UDP'
 NEW_PORT = PORT_NO
 
+if RESULT_PATH[10:] not in os.listdir("./results"):
+    file = open(RESULT_PATH,'w')
+    file.close()
+
+else:
+    file = open(RESULT_PATH,'r+')
+    string = file.read()
+    file.close()
+    file = open(RESULT_PATH,'w')
+    file.write(string[:-1])
+    file.close()
+
+
+
 # Creating a dictionary of names to get files from index numbers coming from the client
 file_name_list = os.listdir('./text_files')
 index_to_names = {}
@@ -68,8 +82,23 @@ def send_data(available_server_port,address):
             server_socket.sendto(bytes(message,'utf-16'),address)
     
     dictionary = {"Client IP_address":address[0],"Client Port":address[1],"Server IP":IP_ADDRESS,"Server port":available_server_port,"Protocol":PROTOCOL,"Book_Name":book_name[:-4]}
-    f.write(',\n' + json.dumps(dictionary))
-    f.close()
+    file = open(RESULT_PATH,'r+')
+    string = file.read()
+    file.close()
+    file = open(RESULT_PATH,'w')
+    file.write(string[:-1])
+    file.close()
+    
+    with open(RESULT_PATH, 'r+') as f:
+        for i in range(1):
+            
+            if len(f.read()) == 0:
+                f.write('['+json.dumps(dictionary))
+            else:
+                f.write(',\n' + json.dumps(dictionary))
+        f.write(']')
+        f.close()
+   
     print("I'm done with the sending. Enjoy you book!")
         
     

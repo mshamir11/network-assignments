@@ -61,12 +61,7 @@ while signal:
 
 # client_socket.setsockopt(socket.SOL_TCP,socket.TCP_QUICKACK,True)
     try:
-        temp_message = client_socket.recv(BUFFER)
-        
-        
-       
-        
-        
+        temp_message = client_socket.recv(BUFFER)       
         if (len(temp_message)<=0):
             break
         # message += temp_message
