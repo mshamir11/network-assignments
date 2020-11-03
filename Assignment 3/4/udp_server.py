@@ -1,7 +1,7 @@
 import socket
 import os
 import json
-
+import threading
 
 #Variables
 IP_ADDRESS = socket.gethostbyname(socket.gethostname())
@@ -19,12 +19,12 @@ for key,name in enumerate(file_name_list):
     index_to_names[key]=name
 
 
-f= open(RESULT_PATH, 'w')
-f.close() 
-while True:
-    print("I'm Listening...")
+# f= open(RESULT_PATH, 'w')
+# f.close() 
+
+
+def send_data(data,address):
     
-    data,address = server_socket.recvfrom(32)
     f= open(RESULT_PATH, 'a') 
     print(f"Connection with {address} has been establish")
     index = int(data.decode('utf-16'))
@@ -42,11 +42,18 @@ while True:
             server_socket.sendto(bytes(message,'utf-16'),address)
     
     dictionary = {"Client IP_address":address[0],"Client Port":address[1],"Server IP":IP_ADDRESS,"Server port":PORT_NO,"Protocol":PROTOCOL,"Book_Name":book_name[:-4]}
-
-        
-    
-    
-    
     f.write(',\n' + json.dumps(dictionary))
     f.close()
     print("I'm done with the sending. Enjoy you book!")
+        
+    
+    
+while True:
+    print("I'm Listening...")
+    data,address = server_socket.recvfrom(32)
+    t= threading.Thread(target=send_data,args=[data,address])
+    t.start()
+    
+    
+    
+    

@@ -1,6 +1,0 @@
-[{"Client IP_address": "127.0.0.1", "Client Port": 53520, "Server IP": "127.0.1.1", "Server port": 12345, "Protocol": "UDP", "Book_Name": "anna_kareina"},
-{"Client IP_address": "127.0.0.1", "Client Port": 44918, "Server IP": "127.0.1.1", "Server port": 12345, "Protocol": "UDP", "Book_Name": "bleak_house"},
-{"Client IP_address": "127.0.0.1", "Client Port": 58533, "Server IP": "127.0.1.1", "Server port": 12345, "Protocol": "UDP", "Book_Name": "don_quixote"},
-{"Client IP_address": "127.0.0.1", "Client Port": 56578, "Server IP": "127.0.1.1", "Server port": 12345, "Protocol": "UDP", "Book_Name": "les_miserables_victor_hugo"},
-{"Client IP_address": "127.0.0.1", "Client Port": 42816, "Server IP": "127.0.1.1", "Server port": 12345, "Protocol": "UDP", "Book_Name": "middlemarch"},
-{"Client IP_address": "127.0.0.1", "Client Port": 51680, "Server IP": "127.0.1.1", "Server port": 12345, "Protocol": "UDP", "Book_Name": "war_and_peace"}]

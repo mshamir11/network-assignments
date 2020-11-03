@@ -28,23 +28,24 @@ for key,name in enumerate(file_name_list):
     index_to_names[key]=name
 
 def send_data(socket,address):
-    index = (client_socket.recv(10)).decode('utf-16')
+    index = (client_socket.recv(10)).decode('utf-8')
     
     print(f"Cleint Requested to sent {index_to_names[int(index)]}")
     book_name = index_to_names[int(index)]
     book_path = './text_files/'+book_name
     book_size = os.path.getsize(book_path)
-    client_socket.send(bytes(book_name[:-4]+str(book_size),'utf-16'))
+    client_socket.send(bytes(book_name[:-4]+str(book_size),'utf-8'))
     f= open(RESULT_PATH, 'a') 
     
-    with open(book_path) as file:
-        message = str(1)
+    with open(book_path,"rb") as file:
+        message = file.read(BUFFER)
         print("Started to read the file")
         while (len(message)>0):
             try:
+                client_socket.send(message)
                 message = file.read(BUFFER)
-                client_socket.send(bytes(message,'utf-16'))
                 time.sleep(0.0001)
+                
             # client_socket.setsockopt(socket.SOL_TCP,socket.TCP_QUICKACK,True)
             except:
                 print("Some issue with the socket connection. Terminating the connection")
