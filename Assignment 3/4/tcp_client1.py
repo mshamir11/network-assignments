@@ -13,6 +13,9 @@ ap.add_argument("-b","--buffer",help="buffer capacity")
 ap.add_argument("-r","--result",help="output result path")
 args = vars(ap.parse_args())
 
+
+    
+    
 #Variables
 IP_ADDRESS = socket.gethostbyname(socket.gethostname())
 PORT_NO = 12345
@@ -21,6 +24,20 @@ INDEX = args['index']
 BUFFER = int(args['buffer'])
 RESULT_PATH = args['result']
 
+if args['result'][10:] not in os.listdir("./results"):
+    file = open(args['result'],'w')
+    file.close()
+
+# else:
+#     file = open(RESULT_PATH,'r+')
+#     string = file.read()
+#     file.close()
+#     if (string[:-1]==']'):
+        
+#         file = open(RESULT_PATH,'w')
+#         file.write(string[:-1])
+#         file.close()
+    
 start_time = time.time()
 client_socket = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 client_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
@@ -33,6 +50,8 @@ port = int(client_socket.recv(32).decode('utf-8'))
 print (port)
 client_socket.close()
 time.sleep(1)
+
+
 client_socket = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 client_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 # client_socket.setsockopt(socket.IPPROTO_TCP,socket.TCP_NODELAY,True)
@@ -66,8 +85,8 @@ while signal:
             break
         # message += temp_message
         write_file.write(temp_message)
-        # print(f"Time elapsed: {time.time() - start_time}s")
-        client_socket.settimeout(0.001)
+        print(f"Time elapsed: {time.time() - start_time}s")
+        # client_socket.settimeout(0.01)
     except:
         break
    
@@ -82,12 +101,25 @@ through_put = size_of_file/final_time
 word_count = subprocess.check_output(f"cat {output_path} | wc -w",shell=True)
 word_count = (word_count.decode())[:-1]
 dictionary = {"Book_Name":book,"Protocol":PROTOCOL,"PID":pid,"Buffer_Size":BUFFER,"Total_Time_Taken":final_time,"Throughput":through_put,"Word_Count":word_count}
-
-with open(RESULT_PATH, 'a') as f:
     
-    f.write(",\n"+json.dumps(dictionary))
-    f.close()
+file = open(RESULT_PATH,'r+')
+string = file.read()
+file.close()
+# if (string[:-1]==']'):
+    
+#     file = open(RESULT_PATH,'w')
+#     file.write(string[:-1])
+#     file.close()
+with open(RESULT_PATH, 'r+') as f:
+    for i in range(1):
         
+        if len(f.read()) == 0:
+            f.write('['+json.dumps(dictionary))
+        else:
+            f.write(',\n' + json.dumps(dictionary))
+    # f.write(']')
+    f.close()
+client_socket.close()
         
     
     

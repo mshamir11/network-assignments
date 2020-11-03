@@ -19,6 +19,20 @@ BUFFER = 32
 NEW_PORT = PORT_NO
 RESULT_PATH ='./results/tcp_ip_address_and_port.json'
 
+if RESULT_PATH[10:] not in os.listdir("./results"):
+    file = open(RESULT_PATH,'w')
+    file.close()
+
+else:
+    file = open(RESULT_PATH,'r+')
+    string = file.read()
+    file.close()
+    if (string[:-1]==']'):
+        
+        file = open(RESULT_PATH,'w')
+        file.write(string[:-1])
+        file.close()
+
 #server_socket.setsockopt(socket.IPPROTO_TCP,socket.TCP_NODELAY,True)
 
 
@@ -66,27 +80,44 @@ def send_data(available_server_port,address):
     book_path = './text_files/'+book_name
     book_size = os.path.getsize(book_path)
     client_socket.send(bytes(book_name[:-4]+str(book_size),'utf-8'))
-    f= open(RESULT_PATH, 'a') 
     
-    with open(book_path) as file:
-        message = str(1)
+    
+    with open(book_path,'rb') as file:
+        message = file.read(BUFFER)
         print("Started to read the file")
         while (len(message)>0):
+            client_socket.send(message)
+            time.sleep(0.0001)
             message = file.read(BUFFER)
-            client_socket.send(bytes(message,'utf-8'))
+            
             
             # client_socket.setsockopt(socket.SOL_TCP,socket.TCP_QUICKACK,True)
     
     dictionary = {"Client IP_address":address[0],"Client Port":address[1],"Server IP":IP_ADDRESS,"Server port":available_server_port,"Protocol":PROTOCOL,"Book_Name":book_name[:-4]}
         
+    file = open(RESULT_PATH,'r+')
+    string = file.read()
+    file.close()
+    if (string[:-1]==']'):
+        
+        file = open(RESULT_PATH,'w')
+        file.write(string[:-1])
+        file.close()
+    
+    with open(RESULT_PATH, 'r+') as f:
+        for i in range(1):
+            
+            if len(f.read()) == 0:
+                f.write('['+json.dumps(dictionary))
+            else:
+                f.write(',\n' + json.dumps(dictionary))
+        f.write(']')
+        f.close()
     
     
-    f.write(",\n"+json.dumps(dictionary))
-    
-    
-    f.close()
+   
     print("Hey Client, I'm done with the sending. Enjoy your book!")
-    time.sleep(3)
+    
  
 while True:
     

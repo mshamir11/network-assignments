@@ -20,6 +20,8 @@ time.sleep(0.5)
 t2.start()
 t1.join()
 t2.join()
+with open(RESULT_PATH,'r+') as file:
+    file.write(']')
 
 
 
