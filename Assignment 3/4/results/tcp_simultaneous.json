@@ -1,2 +1,0 @@
-]{"Book_Name": "les_miserables_victor_hugo", "Protocol": "TCP", "PID": "113996", "Buffer_Size": 32, "Total_Time_Taken": 19.107595920562744, "Throughput": 176357.8743243988, "Word_Count": "568727"},
-{"Book_Name": "war_and_peace", "Protocol": "TCP", "PID": "114000", "Buffer_Size": 32, "Total_Time_Taken": 19.02404808998108, "Throughput": 176596.6940427, "Word_Count": "566317"}
