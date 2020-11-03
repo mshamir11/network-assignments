@@ -77,3 +77,10 @@ Here -i indicates the index of the book. -b the buffer size. -r where to store t
 For UDP:
 replace tcp by udp in the tcp section. and run the code.
 
+======================================================================================================
+
+### Note:
+1. All the results can be seen in the results folder as json files.
+2. Keep the names of the directories as it is.
+3. Compile_result.ipynb jupyter notebook can be used to analyze the result in dataframe.
+4. This assignment is a part of Assignments of course CS 433 - Computer Networks
