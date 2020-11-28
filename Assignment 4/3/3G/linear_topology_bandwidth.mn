@@ -1,0 +1,95 @@
+{
+    "application": {
+        "dpctl": "",
+        "ipBase": "10.0.0.0/8",
+        "netflow": {
+            "nflowAddId": "0",
+            "nflowTarget": "",
+            "nflowTimeout": "600"
+        },
+        "openFlowVersions": {
+            "ovsOf10": "1",
+            "ovsOf11": "0",
+            "ovsOf12": "0",
+            "ovsOf13": "0"
+        },
+        "sflow": {
+            "sflowHeader": "128",
+            "sflowPolling": "30",
+            "sflowSampling": "400",
+            "sflowTarget": ""
+        },
+        "startCLI": "0",
+        "switchType": "ovs",
+        "terminalType": "xterm"
+    },
+    "controllers": [
+        {
+            "opts": {
+                "controllerProtocol": "tcp",
+                "controllerType": "ref",
+                "hostname": "c0",
+                "remoteIP": "127.0.0.1",
+                "remotePort": 6633
+            },
+            "x": "270.0",
+            "y": "53.0"
+        }
+    ],
+    "hosts": [
+        {
+            "number": "3",
+            "opts": {
+                "hostname": "server",
+                "nodeNum": 3,
+                "sched": "host"
+            },
+            "x": "92.0",
+            "y": "166.0"
+        },
+        {
+            "number": "4",
+            "opts": {
+                "hostname": "client",
+                "nodeNum": 4,
+                "sched": "host"
+            },
+            "x": "463.0",
+            "y": "165.0"
+        }
+    ],
+    "links": [
+        {
+            "dest": "client",
+            "opts": {
+                "bw": 1000,
+                "loss": 1
+            },
+            "src": "s1"
+        },
+        {
+            "dest": "s1",
+            "opts": {
+                "bw": 1000,
+                "loss": 1
+            },
+            "src": "server"
+        }
+    ],
+    "switches": [
+        {
+            "number": "1",
+            "opts": {
+                "controllers": [
+                    "c0"
+                ],
+                "hostname": "s1",
+                "nodeNum": 1,
+                "switchType": "default"
+            },
+            "x": "275.0",
+            "y": "163.0"
+        }
+    ],
+    "version": "2"
+}

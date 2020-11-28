@@ -1,0 +1,24 @@
+[{"Book_Name": "middlemarch", "Protocol": "TCP", "PID": "1412", "Buffer_Size": 1024, "Total_Time_Taken (ms)": 1646.632432937622, "Size_of_the_file_created": 1865985, "Throughput": 1133212.8304257004, "Word_Count": "319477"},
+    {"Book_Name": "anna_kareina", "Protocol": "TCP", "PID": "1408", "Buffer_Size": 1024, "Total_Time_Taken (ms)": 1864.5060062408447, "Size_of_the_file_created": 2068079, "Throughput": 1109183.3402937609, "Word_Count": "352845"},
+    {"Book_Name": "don_quixote", "Protocol": "TCP", "PID": "1406", "Buffer_Size": 1024, "Total_Time_Taken (ms)": 2181.7240715026855, "Size_of_the_file_created": 2390853, "Throughput": 1095854.8934894754, "Word_Count": "430268"},
+    {"Book_Name": "war_and_peace", "Protocol": "TCP", "PID": "1410", "Buffer_Size": 1024, "Total_Time_Taken (ms)": 3081.4669132232666, "Size_of_the_file_created": 3359584, "Throughput": 1090254.7697602303, "Word_Count": "566317"},
+    
+    {"Book_Name": "middlemarch", "Protocol": "TCP", "PID": "2733", "Buffer_Size": 1024, "Total_Time_Taken (ms)": 1614.018201828003, "Size_of_the_file_created": 1865985, "Throughput": 1156111.4973094014, "Word_Count": "319477"},
+    {"Book_Name": "anna_kareina", "Protocol": "TCP", "PID": "2729", "Buffer_Size": 1024, "Total_Time_Taken (ms)": 1832.8843116760254, "Size_of_the_file_created": 2068079, "Throughput": 1128319.4399263028, "Word_Count": "352845"},
+    {"Book_Name": "don_quixote", "Protocol": "TCP", "PID": "2727", "Buffer_Size": 1024, "Total_Time_Taken (ms)": 2153.4805297851562, "Size_of_the_file_created": 2390853, "Throughput": 1110227.3584235867, "Word_Count": "430268"},
+    {"Book_Name": "war_and_peace", "Protocol": "TCP", "PID": "2731", "Buffer_Size": 1024, "Total_Time_Taken (ms)": 3047.9609966278076, "Size_of_the_file_created": 3359584, "Throughput": 1102239.8264666, "Word_Count": "566317"},
+    
+    {"Book_Name": "middlemarch", "Protocol": "TCP", "PID": "3964", "Buffer_Size": 1024, "Total_Time_Taken (ms)": 1625.8304119110107, "Size_of_the_file_created": 1865985, "Throughput": 1147711.9546599637, "Word_Count": "319477"},
+    {"Book_Name": "anna_kareina", "Protocol": "TCP", "PID": "3960", "Buffer_Size": 1024, "Total_Time_Taken (ms)": 1839.909315109253, "Size_of_the_file_created": 2068079, "Throughput": 1124011.3754612945, "Word_Count": "352845"},
+    {"Book_Name": "don_quixote", "Protocol": "TCP", "PID": "3958", "Buffer_Size": 1024, "Total_Time_Taken (ms)": 2163.990259170532, "Size_of_the_file_created": 2390853, "Throughput": 1104835.3798581448, "Word_Count": "430268"},
+    {"Book_Name": "war_and_peace", "Protocol": "TCP", "PID": "3962", "Buffer_Size": 1024, "Total_Time_Taken (ms)": 3071.178436279297, "Size_of_the_file_created": 3359584, "Throughput": 1093907.133598562, "Word_Count": "566317"},
+    
+    {"Book_Name": "middlemarch", "Protocol": "TCP", "PID": "3993", "Buffer_Size": 1024, "Total_Time_Taken (ms)": 1624.6669292449951, "Size_of_the_file_created": 1865985, "Throughput": 1148533.872642529, "Word_Count": "319477"},
+    {"Book_Name": "anna_kareina", "Protocol": "TCP", "PID": "3989", "Buffer_Size": 1024, "Total_Time_Taken (ms)": 1821.4232921600342, "Size_of_the_file_created": 2068079, "Throughput": 1135419.2124925863, "Word_Count": "352845"},
+    {"Book_Name": "don_quixote", "Protocol": "TCP", "PID": "3987", "Buffer_Size": 1024, "Total_Time_Taken (ms)": 2145.272970199585, "Size_of_the_file_created": 2390853, "Throughput": 1114474.9564329651, "Word_Count": "430268"},
+    {"Book_Name": "war_and_peace", "Protocol": "TCP", "PID": "3991", "Buffer_Size": 1024, "Total_Time_Taken (ms)": 3034.687280654907, "Size_of_the_file_created": 3359584, "Throughput": 1107061.0212182975, "Word_Count": "566317"},
+    
+    {"Book_Name": "middlemarch", "Protocol": "TCP", "PID": "5253", "Buffer_Size": 1024, "Total_Time_Taken (ms)": 1640.1166915893555, "Size_of_the_file_created": 1865985, "Throughput": 1137714.7794232657, "Word_Count": "319477"},
+    {"Book_Name": "anna_kareina", "Protocol": "TCP", "PID": "5249", "Buffer_Size": 1024, "Total_Time_Taken (ms)": 1851.931095123291, "Size_of_the_file_created": 2068079, "Throughput": 1116714.874244454, "Word_Count": "352845"},
+    {"Book_Name": "don_quixote", "Protocol": "TCP", "PID": "5247", "Buffer_Size": 1024, "Total_Time_Taken (ms)": 2163.0592346191406, "Size_of_the_file_created": 2390853, "Throughput": 1105310.9234065742, "Word_Count": "430268"},
+    {"Book_Name": "war_and_peace", "Protocol": "TCP", "PID": "5251", "Buffer_Size": 1024, "Total_Time_Taken (ms)": 3057.111978530884, "Size_of_the_file_created": 3359584, "Throughput": 1098940.4456209913, "Word_Count": "566317"}

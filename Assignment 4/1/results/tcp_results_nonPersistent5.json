@@ -1,0 +1,5 @@
+{"Book_Name": "bleak_house", "Protocol": "TCP", "PID": "185651", "Buffer_Size": 1024, "Total_Time_Taken (ms)": 382.5259208679199, "Size_of_the_file_created": 2001202, "Throughput": 5231546.127539376, "Word_Count": "356467"},
+{"Book_Name": "don_quixote", "Protocol": "TCP", "PID": "185651", "Buffer_Size": 1024, "Total_Time_Taken (ms)": 133.96525382995605, "Size_of_the_file_created": 2390856, "Throughput": 17846836.635973882, "Word_Count": "430269"},
+{"Book_Name": "les_miserables_victor_hugo", "Protocol": "TCP", "PID": "185651", "Buffer_Size": 1024, "Total_Time_Taken (ms)": 200.52504539489746, "Size_of_the_file_created": 3369778, "Throughput": 16804773.654901, "Word_Count": "568728"},
+{"Book_Name": "middlemarch", "Protocol": "TCP", "PID": "185651", "Buffer_Size": 1024, "Total_Time_Taken (ms)": 95.62349319458008, "Size_of_the_file_created": 1865988, "Throughput": 19513907.489271306, "Word_Count": "319478"},
+{"Book_Name": "war_and_peace", "Protocol": "TCP", "PID": "185651", "Buffer_Size": 1024, "Total_Time_Taken (ms)": 161.86237335205078, "Size_of_the_file_created": 3359587, "Throughput": 20755824.41073501, "Word_Count": "566318"}

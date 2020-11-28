@@ -1,0 +1,7 @@
+[{"Book_Name": "les_miserables_victor_hugo", "Protocol": "TCP", "PID": "5916", "Buffer_Size": 1024, "Total_Time_Taken (ms)": 2896.639347076416, "Size_of_the_file_created": 3369775, "Throughput": 1163339.5104575655, "Word_Count": "568727"},
+    {"Book_Name": "les_miserables_victor_hugo", "Protocol": "TCP", "PID": "5924", "Buffer_Size": 1024, "Total_Time_Taken (ms)": 2886.291980743408, "Size_of_the_file_created": 3369775, "Throughput": 1167510.086464663, "Word_Count": "568727"},
+    {"Book_Name": "les_miserables_victor_hugo", "Protocol": "TCP", "PID": "5932", "Buffer_Size": 1024, "Total_Time_Taken (ms)": 2906.609058380127, "Size_of_the_file_created": 3369775, "Throughput": 1159349.239033198, "Word_Count": "568727"},
+    {"Book_Name": "les_miserables_victor_hugo", "Protocol": "TCP", "PID": "5942", "Buffer_Size": 1024, "Total_Time_Taken (ms)": 2925.1930713653564, "Size_of_the_file_created": 3369775, "Throughput": 1151983.7897151627, "Word_Count": "568727"},
+    {"Book_Name": "les_miserables_victor_hugo", "Protocol": "TCP", "PID": "5951", "Buffer_Size": 1024, "Total_Time_Taken (ms)": 2894.122838973999, "Size_of_the_file_created": 3369775, "Throughput": 1164351.0616137583, "Word_Count": "568727"},
+    {"Book_Name": "les_miserables_victor_hugo", "Protocol": "TCP", "PID": "5958", "Buffer_Size": 1024, "Total_Time_Taken (ms)": 2909.9104404449463, "Size_of_the_file_created": 3369775, "Throughput": 1158033.9219940861, "Word_Count": "568727"}
+    
